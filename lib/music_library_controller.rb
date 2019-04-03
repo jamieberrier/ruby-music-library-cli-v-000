@@ -2,7 +2,7 @@ require 'pry'
 
 class MusicLibraryController
 
-  attr_reader :name, :artist, :genre, :artist_name, :genre_name
+  #attr_reader :name, :artist, :genre, :artist_name, :genre_name
   #@@song_hash = {}
   #@@lib = Song.all.collect { |song| song.name }.sort!
   #@@alphabetized_list = []

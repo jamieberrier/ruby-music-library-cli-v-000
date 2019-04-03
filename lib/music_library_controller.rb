@@ -175,7 +175,7 @@ class MusicLibraryController
     input = gets.strip
 
     #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
-    if
+    if @alphabetized_list.include?(input)
 =begin
     #binding.pry
     if input <= @song_hash.length

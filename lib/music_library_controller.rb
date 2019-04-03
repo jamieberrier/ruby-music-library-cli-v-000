@@ -1,12 +1,6 @@
 require 'pry'
 
 class MusicLibraryController
-
-  #attr_reader :name, :artist, :genre, :artist_name, :genre_name
-  #@@song_hash = {}
-  #@@lib = Song.all.collect { |song| song.name }.sort!
-  #@@alphabetized_list = []
-
   #accepts one argument, the path to the MP3 files to be imported
   #creates a new MusicImporter object, passing in the 'path' value
   #the 'path' argument efaults to './db/mp3s'

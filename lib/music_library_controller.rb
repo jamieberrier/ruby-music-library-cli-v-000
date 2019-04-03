@@ -80,7 +80,11 @@ class MusicLibraryController
 
   #prints all artists in the music library in a numbered list (alphabetized by artist name)
   def list_artists
-    collect_artists
+    Artist.all.collect do |artist|
+      @artist_list << artist.name
+    end
+    @artist_list.uniq!.sort!
+    
     @artist_list.each do |artist_name|
       num = @artist_list.index(artist_name) + 1
       puts "#{num}. #{artist_name}"

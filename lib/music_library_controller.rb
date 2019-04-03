@@ -20,12 +20,7 @@ class MusicLibraryController
     @alphabetized_list = []
     @artist_list = []
     @genre_list = []
-  end
 
-  #welcomes the user
-  #asks the user for input
-  #loops and asks for user input until they type in exit
-  def call
     @lib = Song.all.collect { |song| song.name }.sort!
     @lib.each do |song_name|
       num = @lib.index { |x| x == song_name } + 1
@@ -34,7 +29,12 @@ class MusicLibraryController
       @song_hash[num] = { song_name: song_name, song_artist: song_artist, song_genre: song_genre }
       @alphabetized_list << "#{num}. #{song_artist} - #{song_name} - #{song_genre}"
     end
+  end
 
+  #welcomes the user
+  #asks the user for input
+  #loops and asks for user input until they type in exit
+  def call
     input = ""
     until input == 'exit'
       puts "Welcome to your music library!"

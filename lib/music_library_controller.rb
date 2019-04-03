@@ -182,6 +182,9 @@ class MusicLibraryController
         puts "Playing #{name} by #{artist}"
       end
     end
+  end
+end
+
 =begin
     #binding.pry
     if input <= @song_hash.length
@@ -215,9 +218,6 @@ class MusicLibraryController
       puts "Playing #{} by #{}"
     end
 =end
-  end
-
-end
 
 =begin #old
     nested_library = @library.collect {|filename| filename.split(" - ")}

@@ -26,6 +26,15 @@ class MusicLibraryController
   #asks the user for input
   #loops and asks for user input until they type in exit
   def call
+    @lib = Song.all.collect { |song| song.name }.sort!
+    @lib.each do |song_name|
+      num = @lib.index { |x| x == song_name } + 1
+      song_artist = Song.all.collect { |song| song.artist.name if song_name == song.name }.join
+      song_genre = Song.all.collect { |song| song.genre.name if song_name == song.name }.join
+      @song_hash[num] = { song_name: song_name, song_artist: song_artist, song_genre: song_genre }
+      @alphabetized_list << "#{num}. #{song_artist} - #{song_name} - #{song_genre}"
+    end
+    
     input = ""
     until input == 'exit'
       puts "Welcome to your music library!"
@@ -63,15 +72,6 @@ class MusicLibraryController
       puts "#{song_num}. #{@song_hash.dig(song_num, :song_artist)} - #{@song_hash.dig(song_num, :song_name)} - #{@song_hash.dig(song_num, :song_genre)}"
     end
 =end
-    @lib = Song.all.collect { |song| song.name }.sort!
-    @lib.each do |song_name|
-      num = @lib.index { |x| x == song_name } + 1
-      song_artist = Song.all.collect { |song| song.artist.name if song_name == song.name }.join
-      song_genre = Song.all.collect { |song| song.genre.name if song_name == song.name }.join
-      @song_hash[num] = { song_name: song_name, song_artist: song_artist, song_genre: song_genre }
-      @alphabetized_list << "#{num}. #{song_artist} - #{song_name} - #{song_genre}"
-    end
-
 #    @alphabetized_list.each do |song|
 #      puts "#{song}"
 #    end

@@ -52,7 +52,6 @@ class MusicLibraryController
       elsif input == 'play song'
         play_song
       end
-
     end
   end
 

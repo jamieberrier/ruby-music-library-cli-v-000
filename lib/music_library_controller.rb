@@ -147,7 +147,6 @@ class MusicLibraryController
       end
     end
 =end
-#old
     genre_song_list = []
     Song.all.collect do |song|
       if song.genre.name == genre_name

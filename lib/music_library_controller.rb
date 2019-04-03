@@ -182,13 +182,13 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
 
     input = gets.strip
-
+=begin
     #binding.pry
     if input <= @song_hash.length
       puts "Playing #{@song_hash[input][:song_name]} by #{@song_hash[input][:song_artist]}"
     end
     #binding.pry
-=begin
+
     if list_songs[input.to_i]
       puts "Playing #{} by #{}"
     end

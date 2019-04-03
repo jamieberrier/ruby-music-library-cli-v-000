@@ -173,7 +173,7 @@ class MusicLibraryController
     #prompts the user to choose a song from the alphabetized list output by #list_songs
     puts "Which song number would you like to play?"
     input = gets.strip
-
+    binding.pry
     #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
     if @alphabetized_list.include?(input)
       

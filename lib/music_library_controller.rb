@@ -10,7 +10,7 @@ class MusicLibraryController
     MusicImporter.new(@path).import
 
     @lib = []
-    @song_hash = {}
+    #@song_hash = {}
     @alphabetized_list = []
     @artist_list = []
     @genre_list = []
@@ -20,7 +20,7 @@ class MusicLibraryController
       num = @lib.index { |x| x == song_name } + 1
       song_artist = Song.all.collect { |song| song.artist.name if song_name == song.name }.join
       song_genre = Song.all.collect { |song| song.genre.name if song_name == song.name }.join
-      @song_hash[num] = { song_name: song_name, song_artist: song_artist, song_genre: song_genre }
+      #@song_hash[num] = { song_name: song_name, song_artist: song_artist, song_genre: song_genre }
       @alphabetized_list << "#{num}. #{song_artist} - #{song_name} - #{song_genre}"
     end
   end

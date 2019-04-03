@@ -178,7 +178,6 @@ class MusicLibraryController
     @alphabetized_list.each do |song|
       if song.start_with?(input)
         str = song.split(". ").drop(1).join
-
         output = str.split(" - ")
         name = output[1]
         artist = output[0]

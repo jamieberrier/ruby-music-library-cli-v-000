@@ -175,7 +175,6 @@ class MusicLibraryController
     end
   end
 
-  
   #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
   def play_song
     #prompts the user to choose a song from the alphabetized list output by #list_songs

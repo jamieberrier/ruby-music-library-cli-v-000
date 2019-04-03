@@ -176,7 +176,9 @@ class MusicLibraryController
     binding.pry
     #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
     @alphabetized_list.each do |song|
-      
+      if song.start_with(input)
+        
+      end
     end
 =begin
     #binding.pry

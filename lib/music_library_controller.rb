@@ -102,7 +102,11 @@ class MusicLibraryController
 
   #prints all genres in the music library in a numbered list (alphabetized by genre name)
   def list_genres
-    collect_genres
+    Genre.all.collect do |genre|
+      @genre_list << genre.name
+    end
+    @genre_list.uniq!.sort!
+    
     @genre_list.each do |genre_name|
       num = @genre_list.index(genre_name) + 1
       puts "#{num}. #{genre_name}"

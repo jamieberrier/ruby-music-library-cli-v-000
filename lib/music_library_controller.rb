@@ -179,7 +179,6 @@ class MusicLibraryController
   def play_song
     #prompts the user to choose a song from the alphabetized list output by #list_songs
     puts "Which song number would you like to play?"
-
     input = gets.strip
 =begin
     #binding.pry

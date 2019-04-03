@@ -178,7 +178,7 @@ class MusicLibraryController
     @alphabetized_list.each do |song|
       if song.start_with?(input)
         output = song.split(" - ")
-        puts "Playing #{} by #{}"
+        puts "Playing #{output[1]} by #{}"
       end
     end
 =begin

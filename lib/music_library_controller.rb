@@ -79,9 +79,6 @@ class MusicLibraryController
     @song_hash.each do |song_num, data|
       puts "#{song_num}. #{@song_hash.dig(song_num, :song_artist)} - #{@song_hash.dig(song_num, :song_name)} - #{@song_hash.dig(song_num, :song_genre)}"
     end
-    #@alphabetized_list
-    #@song_hash
-    #binding.pry
   end
 
   def collect_artists

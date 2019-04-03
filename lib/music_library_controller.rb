@@ -106,7 +106,7 @@ class MusicLibraryController
       @genre_list << genre.name
     end
     @genre_list.uniq!.sort!
-    
+
     @genre_list.each do |genre_name|
       num = @genre_list.index(genre_name) + 1
       puts "#{num}. #{genre_name}"

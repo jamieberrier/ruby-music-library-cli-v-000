@@ -34,7 +34,7 @@ class MusicLibraryController
       @song_hash[num] = { song_name: song_name, song_artist: song_artist, song_genre: song_genre }
       @alphabetized_list << "#{num}. #{song_artist} - #{song_name} - #{song_genre}"
     end
-    
+
     input = ""
     until input == 'exit'
       puts "Welcome to your music library!"

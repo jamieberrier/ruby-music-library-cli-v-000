@@ -92,14 +92,14 @@ class MusicLibraryController
     end
     @artist_list
   end
-
+=begin
   def collect_genres
     Genre.all.collect do |genre|
       @genre_list << genre.name
     end
     @genre_list.uniq!.sort!
   end
-
+=end
   #prints all genres in the music library in a numbered list (alphabetized by genre name)
   def list_genres
     Genre.all.collect do |genre|

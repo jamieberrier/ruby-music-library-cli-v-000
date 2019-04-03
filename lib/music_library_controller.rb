@@ -26,7 +26,7 @@ class MusicLibraryController
   #asks the user for input
   #loops and asks for user input until they type in exit
   def call
-    input = nil
+    input = ""
     until input == 'exit'
       puts "Welcome to your music library!"
       puts "To list all of your songs, enter 'list songs'."
@@ -175,11 +175,13 @@ class MusicLibraryController
     end
   end
 
-  #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
   def play_song
     #prompts the user to choose a song from the alphabetized list output by #list_songs
     puts "Which song number would you like to play?"
     input = gets.strip
+
+    #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
+    if 
 =begin
     #binding.pry
     if input <= @song_hash.length

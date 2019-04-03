@@ -185,7 +185,7 @@ class MusicLibraryController
     position = input.to_i
 
     #binding.pry
-    if position <= list_songs.length
+    if position <= @song_hash.length
       puts "Playing #{@song_hash[position][:song_name]} by #{@song_hash[position][:song_artist]}"
     end
     #binding.pry

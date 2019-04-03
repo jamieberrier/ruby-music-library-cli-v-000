@@ -178,8 +178,7 @@ class MusicLibraryController
     @alphabetized_list.each do |song|
       if song.start_with?(input)
         binding.pry
-        str = song.split(". ").drop(1).join
-        output = str.split(" - ")
+        output = song.split(". ").drop(1).join.split(" - ")
         name = output[1]
         artist = output[0]
         puts "Playing #{name} by #{artist}"

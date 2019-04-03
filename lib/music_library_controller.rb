@@ -70,14 +70,14 @@ class MusicLibraryController
     end
 =end
   end
-
+=begin
   def collect_artists
     Artist.all.collect do |artist|
       @artist_list << artist.name
     end
     @artist_list.uniq!.sort!
   end
-
+=end
   #prints all artists in the music library in a numbered list (alphabetized by artist name)
   def list_artists
     Artist.all.collect do |artist|

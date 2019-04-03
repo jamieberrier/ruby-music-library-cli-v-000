@@ -64,10 +64,11 @@ class MusicLibraryController
     @alphabetized_list.each do |song|
       puts "#{song}"
     end
-
+=begin
     @song_hash.each do |song_num, data|
       puts "#{song_num}. #{@song_hash.dig(song_num, :song_artist)} - #{@song_hash.dig(song_num, :song_name)} - #{@song_hash.dig(song_num, :song_genre)}"
     end
+=end
   end
 
   def collect_artists

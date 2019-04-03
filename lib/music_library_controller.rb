@@ -61,14 +61,9 @@ class MusicLibraryController
   #prints all songs in the music library in a numbered list (alphabetized by song name)
   def list_songs
     #1. Thundercat - For Love I Come - dance
-=begin
-    @song_hash.each do |song_num, data|
-      puts "#{song_num}. #{@song_hash.dig(song_num, :song_artist)} - #{@song_hash.dig(song_num, :song_name)} - #{@song_hash.dig(song_num, :song_genre)}"
+    @alphabetized_list.each do |song|
+      puts "#{song}"
     end
-=end
-#    @alphabetized_list.each do |song|
-#      puts "#{song}"
-#    end
 
     @song_hash.each do |song_num, data|
       puts "#{song_num}. #{@song_hash.dig(song_num, :song_artist)} - #{@song_hash.dig(song_num, :song_name)} - #{@song_hash.dig(song_num, :song_genre)}"

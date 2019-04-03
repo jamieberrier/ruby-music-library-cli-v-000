@@ -177,7 +177,8 @@ class MusicLibraryController
     #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
     @alphabetized_list.each do |song|
       if song.start_with?(input)
-        output = song.split(". ").drop(1)
+        new_array = song.split(". ").drop(1).join
+        
         output = str.split(" - ")
         name = output[1]
         artist = output[0]

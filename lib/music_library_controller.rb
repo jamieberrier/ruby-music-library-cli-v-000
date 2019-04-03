@@ -138,15 +138,6 @@ class MusicLibraryController
     puts "Please enter the name of a genre:"
     genre_name = gets.strip
 
-=begin
-    count = 1
-    @song_hash.each do |song_num, data|
-      if @song_hash.dig(song_num, :song_genre) == genre_name
-        puts "#{count}. #{@song_hash.dig(song_num, :song_artist)} - #{@song_hash.dig(song_num, :song_name)}"
-        count += 1
-      end
-    end
-=end
     genre_song_list = []
     Song.all.collect do |song|
       if song.genre.name == genre_name
@@ -169,7 +160,15 @@ class MusicLibraryController
       puts "#{num}. #{filename}"
     end
   end
-
+=begin
+    count = 1
+    @song_hash.each do |song_num, data|
+      if @song_hash.dig(song_num, :song_genre) == genre_name
+        puts "#{count}. #{@song_hash.dig(song_num, :song_artist)} - #{@song_hash.dig(song_num, :song_name)}"
+        count += 1
+      end
+    end
+=end
   def play_song
     #prompts the user to choose a song from the alphabetized list output by #list_songs
     puts "Which song number would you like to play?"
